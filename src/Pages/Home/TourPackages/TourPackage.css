@@ -1,0 +1,12 @@
+.package-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+
+@media only screen and (max-width:770px) {
+    .package-container{
+        display: block;
+    }
+}

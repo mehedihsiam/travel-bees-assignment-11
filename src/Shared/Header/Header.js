@@ -17,11 +17,11 @@ const Header = () => {
                 </Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
-                    <Navbar.Text className="mx-4 ">
-                        <Link to="/myOrders" className="text-warning nav-menu fw-bold color-a">My Orders</Link>
-                    </Navbar.Text>
                     <Navbar.Text className="mx-4">
                         <Link to="/allOrders" className="text-warning nav-menu fw-bold color-a">Manage all Orders</Link>
+                    </Navbar.Text>
+                    <Navbar.Text className="mx-4 ">
+                        <Link to="/myOrders" className="text-warning nav-menu fw-bold color-a">My Orders</Link>
                     </Navbar.Text>
                     <Navbar.Text>
                         {
