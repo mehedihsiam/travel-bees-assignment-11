@@ -10,6 +10,7 @@ import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import MyOrders from './Pages/MyOrders/MyOrders';
 import Register from './Pages/Register/Register';
 import ManageAllOrders from './Pages/ManageAllOrders/ManageAllOrders';
+import Booking from './Pages/Booking/Booking';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/allOrders">
             <ManageAllOrders></ManageAllOrders>
+          </PrivateRoute>
+          <PrivateRoute path="/booking/:id">
+            <Booking></Booking>
           </PrivateRoute>
           <Route exact path="/login">
             <Login></Login>
