@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# TRAVEL BEES
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Travel Bees](https://travell-bees.web.app/) is a Tour Arranger
 
 ## Available Scripts
 
