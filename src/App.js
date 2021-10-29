@@ -4,24 +4,44 @@ import './App.css';
 import Home from './Pages/Home/Home';
 import Header from './Shared/Header/Header';
 import NotFound from './Pages/NotFound/NotFound';
+import AuthProvider from './contexts/AuthProvider';
+import Login from './Pages/Login/Login';
+import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
+import MyOrders from './Pages/MyOrders/MyOrders';
+import Register from './Pages/Register/Register';
+import ManageAllOrders from './Pages/ManageAllOrders/ManageAllOrders';
 
 function App() {
   return (
 
-    <BrowserRouter>
-      <Header></Header>
-      <Switch>
-        <Route exact path="/">
-          <Home></Home>
-        </Route>
-        <Route exact path="/home">
-          <Home></Home>
-        </Route>
-        <Route exact path="*">
-          <NotFound></NotFound>
-        </Route>
-      </Switch>
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <Header></Header>
+        <Switch>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <Route exact path="/home">
+            <Home></Home>
+          </Route>
+          <PrivateRoute path="/myOrders">
+            <MyOrders></MyOrders>
+          </PrivateRoute>
+          <PrivateRoute path="/allOrders">
+            <ManageAllOrders></ManageAllOrders>
+          </PrivateRoute>
+          <Route exact path="/login">
+            <Login></Login>
+          </Route>
+          <Route exact path="/register">
+            <Register></Register>
+          </Route>
+          <Route exact path="*">
+            <NotFound></NotFound>
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 
