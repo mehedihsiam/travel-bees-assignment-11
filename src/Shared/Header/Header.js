@@ -3,9 +3,13 @@ import { Container, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import './Header.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
+    const profileIcon = <FontAwesomeIcon icon={faUserCircle} />
     const { user, logOut } = useAuth();
+    console.log(user.photoURL)
 
     return (
         <Navbar className="bg-transparent">
@@ -38,11 +42,18 @@ const Header = () => {
                                 <Link to="/login" className="btn btn-warning color-a fw-bold me-2">Login</Link>
                         }
                     </Navbar.Text>
-                    <Navbar.Text>
+                    <Navbar.Text className="ms-5">
                         {
-                            user.email ? <p className="color-a fw-bold">{user?.displayName}</p>
+                            user.email ?
+                                <Link to="/dashBoard" className="color-a fw-bold">
+                                    <div className="text-center">
+                                        <img src={user.photoURL} alt="" className="profile" />
+                                        <br />
+                                        <small>{user?.displayName}</small>
+                                    </div>
+                                </Link>
                                 :
-                                <p>No Logged in user</p>
+                                <p className="fs-3 text-warning">{profileIcon}</p>
                         }
                     </Navbar.Text>
                 </Navbar.Collapse>

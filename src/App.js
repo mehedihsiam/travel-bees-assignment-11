@@ -13,6 +13,7 @@ import ManageAllOrders from './Pages/ManageAllOrders/ManageAllOrders';
 import Booking from './Pages/Booking/Booking';
 import AllPackages from './Pages/AllPackages/AllPackages';
 import AddPackage from './Pages/AddPackage/AddPackage';
+import DashBoard from './Pages/DashBoard/DashBoard';
 
 function App() {
   return (
@@ -47,6 +48,9 @@ function App() {
           </Route>
           <PrivateRoute exact path="/addPackage">
             <AddPackage></AddPackage>
+          </PrivateRoute>
+          <PrivateRoute exact path="/dashBoard">
+            <DashBoard></DashBoard>
           </PrivateRoute>
           <Route exact path="*">
             <NotFound></NotFound>

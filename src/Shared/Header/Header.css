@@ -5,3 +5,8 @@
 .nav-menu{
     text-decoration: none;
 }
+
+.profile{
+    width: 40px;
+    border-radius: 50%;
+}
