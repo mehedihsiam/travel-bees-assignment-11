@@ -6,7 +6,7 @@ const BookedPackage = ({ singlePackage, bookedPackages, setBookedPackages }) => 
     const handleCancelBooking = (id) => {
         const procceed = window.confirm('Are you sure to cancel this package?');
         if (procceed) {
-            const url = `http://localhost:5000/orders/${id}`
+            const url = `https://agile-mesa-76364.herokuapp.com/orders/${id}`
             fetch(url, {
                 method: "DELETE"
             })

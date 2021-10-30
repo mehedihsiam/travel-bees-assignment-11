@@ -9,7 +9,7 @@ const Booking = () => {
 
     const [bookingPackage, setBookingPackage] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/booking/${id}`)
+        fetch(`https://agile-mesa-76364.herokuapp.com/booking/${id}`)
             .then(res => res.json())
             .then(data => setBookingPackage(data))
     }, [])

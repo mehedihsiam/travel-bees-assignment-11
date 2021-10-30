@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 const AddPackage = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = (data, e) => {
-        axios.post('http://localhost:5000/packages', data)
+        axios.post('https://agile-mesa-76364.herokuapp.com/packages', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Package has been added')

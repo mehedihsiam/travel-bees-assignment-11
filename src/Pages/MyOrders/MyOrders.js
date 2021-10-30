@@ -8,7 +8,7 @@ const MyOrders = () => {
     const { user } = useAuth();
     const [bookedPackages, setBookedPackages] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=${user.email}`)
+        fetch(`https://agile-mesa-76364.herokuapp.com/orders?email=${user.email}`)
             .then(res => res.json())
             .then(data => setBookedPackages(data));
     }, [bookedPackages]);

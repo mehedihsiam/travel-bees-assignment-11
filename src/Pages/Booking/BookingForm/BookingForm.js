@@ -11,7 +11,7 @@ const BookingForm = ({ packageName }) => {
         const status = 'pending'
         const { customerName, email, nidNumber } = shippingInfo;
         const orderData = { customerName, email, nidNumber, packageName, status }
-        axios.post('http://localhost:5000/orders', orderData)
+        axios.post('https://agile-mesa-76364.herokuapp.com/orders', orderData)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Your Order Has Benn Placed. Please Wait for Admin Approving.')

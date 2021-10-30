@@ -4,7 +4,7 @@ const ManageAllOrders = () => {
     const [bookedPackages, setBookedPackages] = useState([]);
     const status = { status: "Approved" }
     useEffect(() => {
-        fetch('http://localhost:5000/orders/admin')
+        fetch('https://agile-mesa-76364.herokuapp.com/orders/admin')
             .then(res => res.json())
             .then(data => setBookedPackages(data))
     }, []);
@@ -12,7 +12,7 @@ const ManageAllOrders = () => {
 
     // handle order approval
     const handleApproval = (id) => {
-        const url = `http://localhost:5000/orders/${id}`
+        const url = `https://agile-mesa-76364.herokuapp.com/orders/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -33,7 +33,7 @@ const ManageAllOrders = () => {
     const handleRejection = (id) => {
         const procceed = window.confirm('Are you sure to REJECT this order?');
         if (procceed) {
-            const url = `http://localhost:5000/orders/${id}`
+            const url = `https://agile-mesa-76364.herokuapp.com/orders/${id}`
             fetch(url, {
                 method: "DELETE"
             })
