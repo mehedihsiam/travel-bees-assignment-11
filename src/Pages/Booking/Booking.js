@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router';
+import BookingForm from './BookingForm/BookingForm';
 
 const Booking = () => {
     const { id } = useParams();
@@ -16,7 +17,7 @@ const Booking = () => {
     return (
         <div className="container">
             <h1 className="color-b text-center mt-4 mb-4">Tour Details</h1>
-            <div className="d-flex">
+            <div className="d-flex mb-5">
                 <div><img src={img} alt="" /></div>
                 <div className="px-4">
                     <h2>{name}</h2>
@@ -26,6 +27,10 @@ const Booking = () => {
                     <p className="fw-bold bg-warning text-center p-2">{guide} will Guide This tour</p>
                 </div>
             </div>
+            <BookingForm
+                key={bookingPackage._id}
+                packageName={name}
+            ></BookingForm>
         </div>
     );
 };

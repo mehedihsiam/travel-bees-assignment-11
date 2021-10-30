@@ -11,6 +11,7 @@ import MyOrders from './Pages/MyOrders/MyOrders';
 import Register from './Pages/Register/Register';
 import ManageAllOrders from './Pages/ManageAllOrders/ManageAllOrders';
 import Booking from './Pages/Booking/Booking';
+import AllPackages from './Pages/AllPackages/AllPackages';
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
           </Route>
           <Route exact path="/home">
             <Home></Home>
+          </Route>
+          <Route exact path="/allPackages">
+            <AllPackages></AllPackages>
           </Route>
           <PrivateRoute path="/myOrders">
             <MyOrders></MyOrders>
