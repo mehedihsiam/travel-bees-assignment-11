@@ -28,7 +28,7 @@ const BookingForm = ({ packageName }) => {
                 <br />
                 <input {...register("email")} value={user.email} className="mb-2" />
                 <br />
-                <input {...register("nidNumber")} placeholder="NID Number" className="mb-2" />
+                <input {...register("nidNumber")} placeholder="NID Number" className="mb-2" required />
                 <br />
                 <button type="submit" className="btn btn-warning">Submit</button>
             </form>

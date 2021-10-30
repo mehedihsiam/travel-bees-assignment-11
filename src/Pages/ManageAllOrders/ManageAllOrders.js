@@ -47,31 +47,38 @@ const ManageAllOrders = () => {
                 })
         }
     }
-    return (
-        <div className="container">
-            <h2 className="text-center color-b my-5">All Booked Packages</h2>
-            <table className="table table-striped table-hover">
-                <thead>
-                    <th>Package Name</th>
-                    <th>Status</th>
-                    <th className="text-end pe-5">Action</th>
-                </thead>
+    if (bookedPackages.length > 0) {
+        return (
+            <div className="container">
+                <h2 className="text-center color-b my-5">All Booked Packages</h2>
+                <table className="table table-striped table-hover">
+                    <thead>
+                        <th>Package Name</th>
+                        <th>Status</th>
+                        <th className="text-end pe-5">Action</th>
+                    </thead>
 
-                <tbody>
-                    {
-                        bookedPackages.map(booked => <tr key={booked._id}>
-                            <td ><span className="fw-bold">{booked.packageName}</span> <br /> <span className="text-muted">{booked.customerName}</span></td>
-                            <td>{booked.status}</td>
-                            <td className="text-end">
-                                <button className="btn btn-danger mx-2 my-2" onClick={() => handleRejection(booked._id)}>Reject</button>
-                                <button className="btn btn-warning mx-2 my-2" onClick={() => handleApproval(booked._id)}>Approved</button>
-                            </td>
-                        </tr>)
-                    }
-                </tbody>
-            </table>
-        </div>
-    );
+                    <tbody>
+                        {
+                            bookedPackages.map(booked => <tr key={booked._id}>
+                                <td ><span className="fw-bold">{booked.packageName}</span> <br /> <span className="text-muted">{booked.customerName}</span></td>
+                                <td>{booked.status}</td>
+                                <td className="text-end">
+                                    <button className="btn btn-danger mx-2 my-2" onClick={() => handleRejection(booked._id)}>Reject</button>
+                                    <button className="btn btn-warning mx-2 my-2" onClick={() => handleApproval(booked._id)}>Approved</button>
+                                </td>
+                            </tr>)
+                        }
+                    </tbody>
+                </table>
+            </div>
+        );
+    }
+    else {
+        return (
+            <h2 className="text-center text-muted mt-5 pt-5">No Booking Found</h2>
+        )
+    }
 };
 
 export default ManageAllOrders;

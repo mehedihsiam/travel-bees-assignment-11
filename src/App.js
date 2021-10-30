@@ -15,6 +15,7 @@ import AllPackages from './Pages/AllPackages/AllPackages';
 import AddPackage from './Pages/AddPackage/AddPackage';
 import DashBoard from './Pages/DashBoard/DashBoard';
 import Footer from './Shared/Footer/Footer';
+import ManagePackages from './Pages/ManagePackages/ManagePackages';
 
 function App() {
   return (
@@ -47,9 +48,12 @@ function App() {
           <Route exact path="/register">
             <Register></Register>
           </Route>
-          <PrivateRoute exact path="/addPackage">
+          <Route exact path="/addPackage">
             <AddPackage></AddPackage>
-          </PrivateRoute>
+          </Route>
+          <Route exact path="/managePackages">
+            <ManagePackages></ManagePackages>
+          </Route>
           <PrivateRoute exact path="/dashBoard">
             <DashBoard></DashBoard>
           </PrivateRoute>

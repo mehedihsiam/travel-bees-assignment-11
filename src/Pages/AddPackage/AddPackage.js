@@ -24,7 +24,7 @@ const AddPackage = () => {
                 <input {...register("guide")} placeholder="Guide Name" className="mb-3" /> <br />
                 <input {...register("duration")} placeholder="Tour duration" defaultValue="Days" className="mb-3" /> <br />
                 <input {...register("cost")} placeholder="Tour Cost BDT" defaultValue="BDT" className="mb-3" /> <br />
-                <input {...register("img")} placeholder="Image URL" className="mb-3" /> <br />
+                <input {...register("img")} placeholder="Image URL(Image Ratio must be 3:2)" className="mb-3" /> <br />
                 <input {...register("status")} value="pending" className="mb-3" /> <br />
                 <button type="submit" className="btn btn-warning">Add</button>
             </form>
