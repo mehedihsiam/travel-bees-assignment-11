@@ -41,7 +41,7 @@ const Header = () => {
                                     <div className="text-center">
                                         <img src={user.photoURL} alt="" className="profile" />
                                         <br />
-                                        <small>{user?.displayName}</small>
+                                        <small className="">{user?.displayName}</small>
                                     </div>
                                 </Link>
                                 :
