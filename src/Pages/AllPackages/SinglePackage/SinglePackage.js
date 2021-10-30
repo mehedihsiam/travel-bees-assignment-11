@@ -5,7 +5,7 @@ const SinglePackage = ({ tour }) => {
     const { name, description, guide, img, duration, cost, _id } = tour;
     return (
         <div>
-            <div className="package">
+            <div className="package" data-aos="flip-right">
                 <div>
                     <img src={img} alt="" className="img-fluid" />
                 </div>

@@ -3,8 +3,12 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import SingleTour from './SingleTour/SingleTour';
 import './TourPackage.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const TourPackages = () => {
+    AOS.init();
     const [packages, setPackages] = useState([])
     useEffect(() => {
         fetch('https://agile-mesa-76364.herokuapp.com/packages')

@@ -4,7 +4,7 @@ import './Blog.css'
 const Blog = ({ blog }) => {
     const { name, article, author, img } = blog;
     return (
-        <div className="blog-container my-5">
+        <div className="blog-container my-5" data-aos="flip-up">
             <div>
                 <img src={img} alt="" className="img-fluid rounded" />
             </div>
