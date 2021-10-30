@@ -2,20 +2,25 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import useAuth from '../../hooks/useAuth';
+import BookedPackage from './BookedPackage/BookedPackage';
 
 const MyOrders = () => {
     const { user } = useAuth();
-    const [orderList, setOrderList] = useState([]);
+    const [bookedPackages, setBookedPackages] = useState([]);
     useEffect(() => {
         fetch(`http://localhost:5000/orders?email=${user.email}`)
             .then(res => res.json())
-            .then(data => setOrderList(data));
-    }, [orderList]);
-    // console.log(orderList)
+            .then(data => setBookedPackages(data));
+    }, [bookedPackages]);
     return (
         <div>
             {
-                orderList.map(order => <h5>{order.packageName}</h5>)
+                bookedPackages.map(singleBookedPackage => <BookedPackage
+                    key={singleBookedPackage._id}
+                    singlePackage={singleBookedPackage}
+                    bookedPackages={bookedPackages}
+                    setBookedPackages={setBookedPackages}
+                ></BookedPackage>)
             }
         </div>
     );
