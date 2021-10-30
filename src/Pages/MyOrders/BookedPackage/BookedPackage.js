@@ -21,11 +21,11 @@ const BookedPackage = ({ singlePackage, bookedPackages, setBookedPackages }) => 
         }
     }
     return (
-        <div>
-            <h6>{packageName}</h6>
-            <small>{status}</small>
-            <input type="button" value="Cancel" onClick={() => handleCancelBooking(_id)} />
-        </div>
+        <tr>
+            <td>{packageName}</td>
+            <td>{status}</td>
+            <td className="text-end"><input className="mx-4 btn btn-danger" type="button" value="Cancel" onClick={() => handleCancelBooking(_id)} /></td>
+        </tr>
     );
 };
 

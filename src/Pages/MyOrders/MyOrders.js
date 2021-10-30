@@ -14,15 +14,26 @@ const MyOrders = () => {
     }, [bookedPackages]);
     if (bookedPackages.length > 0) {
         return (
-            <div>
-                {
-                    bookedPackages.map(singleBookedPackage => <BookedPackage
-                        key={singleBookedPackage._id}
-                        singlePackage={singleBookedPackage}
-                        bookedPackages={bookedPackages}
-                        setBookedPackages={setBookedPackages}
-                    ></BookedPackage>)
-                }
+            <div className="container">
+                <table className="table table-striped table-hover">
+                    <thead>
+                        <th>Package Name</th>
+                        <th>Status</th>
+                        <th className="text-end pe-5">Action</th>
+                    </thead>
+
+                    <tbody>
+
+                        {
+                            bookedPackages.map(singleBookedPackage => <BookedPackage
+                                key={singleBookedPackage._id}
+                                singlePackage={singleBookedPackage}
+                                bookedPackages={bookedPackages}
+                                setBookedPackages={setBookedPackages}
+                            ></BookedPackage>)
+                        }
+                    </tbody>
+                </table>
             </div>
         );
     }
