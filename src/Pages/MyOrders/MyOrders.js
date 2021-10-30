@@ -12,18 +12,25 @@ const MyOrders = () => {
             .then(res => res.json())
             .then(data => setBookedPackages(data));
     }, [bookedPackages]);
-    return (
-        <div>
-            {
-                bookedPackages.map(singleBookedPackage => <BookedPackage
-                    key={singleBookedPackage._id}
-                    singlePackage={singleBookedPackage}
-                    bookedPackages={bookedPackages}
-                    setBookedPackages={setBookedPackages}
-                ></BookedPackage>)
-            }
-        </div>
-    );
+    if (bookedPackages.length > 0) {
+        return (
+            <div>
+                {
+                    bookedPackages.map(singleBookedPackage => <BookedPackage
+                        key={singleBookedPackage._id}
+                        singlePackage={singleBookedPackage}
+                        bookedPackages={bookedPackages}
+                        setBookedPackages={setBookedPackages}
+                    ></BookedPackage>)
+                }
+            </div>
+        );
+    }
+    else {
+        return (
+            <h2 className="text-center text-muted mt-5 pt-5">You Have not booked any Pcakage</h2>
+        )
+    }
 };
 
 export default MyOrders;
