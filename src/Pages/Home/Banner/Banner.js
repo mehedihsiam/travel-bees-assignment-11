@@ -8,7 +8,8 @@ const Banner = () => {
                 <div className="col-md-6 col-sm-12 banner-left">
                     <img src="https://i.ibb.co/jLSyW2q/BANNER.png" alt="" className="img-fluid" />
                 </div>
-                <div className="col-md-6 col-sm-12">
+                <div className="col-md-6 col-sm-12" data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-bottom">
                     <h1 className="mt-5"><span className="color-a">TRAVEL</span> <span className="color-b">BEE'S</span></h1>
                     <p className="color-b">
                         Travel Bee's is a trusted travel management agency.
