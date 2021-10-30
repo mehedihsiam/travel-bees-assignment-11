@@ -14,6 +14,7 @@ import Booking from './Pages/Booking/Booking';
 import AllPackages from './Pages/AllPackages/AllPackages';
 import AddPackage from './Pages/AddPackage/AddPackage';
 import DashBoard from './Pages/DashBoard/DashBoard';
+import Footer from './Shared/Footer/Footer';
 
 function App() {
   return (
@@ -56,6 +57,7 @@ function App() {
             <NotFound></NotFound>
           </Route>
         </Switch>
+        <Footer></Footer>
       </BrowserRouter>
     </AuthProvider>
   );

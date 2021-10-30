@@ -21,19 +21,11 @@ const Header = () => {
                 </Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
-
-                    <Navbar.Text className="mx-4">
-                        {
-                            user.email && <Link to="/allOrders" className="text-warning nav-menu fw-bold color-a">Manage Bookings</Link>
-                        }
-                    </Navbar.Text>
                     <Navbar.Text className="mx-4 ">
-                        {
-                            user.email && <Link to="/myOrders" className="text-warning nav-menu fw-bold color-a">My Booking</Link>
-                        }
+                        <Link to="/allPackages" className="text-warning nav-menu fw-bold color-a">All Packages</Link>
                     </Navbar.Text>
                     <Navbar.Text className="mx-4">
-                        <Link to="/allPackages" className="text-warning nav-menu fw-bold color-a">All Packages</Link>
+
                     </Navbar.Text>
                     <Navbar.Text>
                         {
