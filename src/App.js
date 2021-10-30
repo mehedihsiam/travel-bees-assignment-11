@@ -12,6 +12,7 @@ import Register from './Pages/Register/Register';
 import ManageAllOrders from './Pages/ManageAllOrders/ManageAllOrders';
 import Booking from './Pages/Booking/Booking';
 import AllPackages from './Pages/AllPackages/AllPackages';
+import AddPackage from './Pages/AddPackage/AddPackage';
 
 function App() {
   return (
@@ -43,6 +44,9 @@ function App() {
           </Route>
           <Route exact path="/register">
             <Register></Register>
+          </Route>
+          <Route exact path="/addPackage">
+            <AddPackage></AddPackage>
           </Route>
           <Route exact path="*">
             <NotFound></NotFound>

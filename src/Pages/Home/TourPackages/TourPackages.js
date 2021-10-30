@@ -11,6 +11,7 @@ const TourPackages = () => {
             .then(res => res.json())
             .then(data => setPackages(data))
     }, [])
+    const slicedPackages = packages.slice(0, 6);
     return (
         <div>
             <br />
@@ -18,7 +19,7 @@ const TourPackages = () => {
             <h2 className="text-center color-b my-5">Our Special Tour Packages</h2>
             <div className="container package-container">
                 {
-                    packages.map(singlePackage => <SingleTour
+                    slicedPackages.map(singlePackage => <SingleTour
                         key={singlePackage._id}
                         tour={singlePackage}
                     ></SingleTour>)
