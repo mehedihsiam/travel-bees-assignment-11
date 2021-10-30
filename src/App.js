@@ -45,9 +45,9 @@ function App() {
           <Route exact path="/register">
             <Register></Register>
           </Route>
-          <Route exact path="/addPackage">
+          <PrivateRoute exact path="/addPackage">
             <AddPackage></AddPackage>
-          </Route>
+          </PrivateRoute>
           <Route exact path="*">
             <NotFound></NotFound>
           </Route>
