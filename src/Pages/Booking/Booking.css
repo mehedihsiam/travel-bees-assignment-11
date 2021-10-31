@@ -1,0 +1,11 @@
+.package-details{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+};
+
+@media only screen and (max-width:770px){
+    .package-details{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
