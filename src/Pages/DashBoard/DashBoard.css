@@ -1,3 +1,21 @@
 .bg-a{
     background-color: #00385D;
 }
+
+.dashboard-list{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 40%;
+}
+.btn-a{
+    background-color: transparent;
+    border: none;
+}
+
+.last-list{
+    background-color: #FFC107;
+}
+
+.last-list:hover{
+    background-color: #f1b204;
+}

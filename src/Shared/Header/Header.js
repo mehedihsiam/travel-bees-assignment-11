@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Navbar } from 'react-bootstrap';
+import { Container, Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import './Header.css'
@@ -8,46 +8,44 @@ import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
     const profileIcon = <FontAwesomeIcon icon={faUserCircle} />
-    const { user, logOut } = useAuth();
-    console.log(user.photoURL)
+    const { user } = useAuth();
+    // console.log(user.photoURL)
 
     return (
-        <Navbar className="bg-transparent">
+        <Navbar bg="transparent" expand="lg">
             <Container>
                 <Navbar.Brand>
                     <Link to="/home">
                         <img src="https://i.ibb.co/BP5Gp8Q/logo.png" alt="" className="img-fluid logo" />
                     </Link>
                 </Navbar.Brand>
-                <Navbar.Toggle />
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse className="justify-content-end">
-                    <Navbar.Text className="mx-4 ">
-                        <Link to="/allPackages" className="text-warning nav-menu fw-bold color-a">All Packages</Link>
-                    </Navbar.Text>
-                    <Navbar.Text className="mx-4">
 
-                    </Navbar.Text>
-                    <Navbar.Text>
-                        {
-                            user.email ? <button className="btn btn-warning color-a fw-bold me-2" onClick={logOut}>Log Out</button>
-                                :
-                                <Link to="/login" className="btn btn-warning color-a fw-bold me-2">Login</Link>
-                        }
-                    </Navbar.Text>
-                    <Navbar.Text className="ms-5">
+                    <Nav className="mx-4 text-center">
+                        <Link to="/allPackages" className="color-b nav-menu fw-bold color-a">All Packages</Link>
+                    </Nav>
+
+
+
+                    <Nav.Link className="">
                         {
                             user.email ?
-                                <Link to="/dashBoard" className="color-a fw-bold">
+                                <Link to="/dashBoard" className="fw-bold">
                                     <div className="text-center">
                                         <img src={user.photoURL} alt="" className="profile" />
-                                        <br />
-                                        <small className="">{user?.displayName}</small>
                                     </div>
                                 </Link>
                                 :
-                                <p className="fs-3 text-warning">{profileIcon}</p>
+                                <Link to="/dashBoard" className="fs-2 color-b">{profileIcon}</Link>
                         }
-                    </Navbar.Text>
+                    </Nav.Link>
+
+
+                    <Nav.Link className="mx-4">
+
+                    </Nav.Link>
+
                 </Navbar.Collapse>
             </Container>
         </Navbar>

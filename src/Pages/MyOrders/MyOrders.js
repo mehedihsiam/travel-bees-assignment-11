@@ -39,7 +39,7 @@ const MyOrders = () => {
     }
     else {
         return (
-            <h2 className="text-center text-muted mt-5 pt-5">You Have not booked any Pcakage</h2>
+            <h2 className="text-center text-muted my-5 py-5">You Have not booked any Pcakage</h2>
         )
     }
 };
