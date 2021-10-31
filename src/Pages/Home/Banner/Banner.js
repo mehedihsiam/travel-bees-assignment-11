@@ -1,7 +1,10 @@
 import React from 'react';
 import './Banner.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Banner = () => {
+    AOS.init();
     return (
         <div className="container">
             <div className="row">

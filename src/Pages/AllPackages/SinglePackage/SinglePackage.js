@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const SinglePackage = ({ tour }) => {
+    AOS.init();
     const { name, description, guide, img, duration, cost, _id } = tour;
     return (
-        <div>
-            <div className="package" data-aos="flip-right">
+        <div data-aos="flip-up">
+            <div className="package">
                 <div>
                     <img src={img} alt="" className="img-fluid" />
                 </div>

@@ -1,7 +1,10 @@
 import React from 'react';
 import './Blog.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Blog = ({ blog }) => {
+    AOS.init();
     const { name, article, author, img } = blog;
     return (
         <div className="blog-container my-5" data-aos="flip-up">

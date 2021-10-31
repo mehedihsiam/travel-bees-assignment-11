@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './SingleTour.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const SingleTour = ({ tour }) => {
+    AOS.init();
     const { name, description, guide, img, duration, cost, _id } = tour;
     return (
         <div>

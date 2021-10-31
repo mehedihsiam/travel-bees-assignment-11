@@ -1,7 +1,10 @@
 import React from 'react';
 import './Review.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Review = ({ review }) => {
+    AOS.init();
     const { name, reviews, img } = review;
     return (
         <div>
