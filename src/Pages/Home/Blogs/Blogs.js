@@ -12,7 +12,7 @@ const Blogs = () => {
     }, [])
     return (
         <div className="container">
-            <h2>Blogs</h2>
+            <h2 className="text-center color-b">Blogs</h2>
             {
                 blogs.map(blog => <Blog
                     key={blog._id}

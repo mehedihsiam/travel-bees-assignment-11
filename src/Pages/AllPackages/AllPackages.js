@@ -14,7 +14,7 @@ const AllPackages = () => {
 
 
     return (
-        <div>
+        <div >
             <br />
             <br />
             <h2 className="text-center color-b my-5">Our Tour Packages</h2>

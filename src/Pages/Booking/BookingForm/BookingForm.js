@@ -1,11 +1,20 @@
 import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
 import "./BookingForm.css"
 
 const BookingForm = ({ packageName }) => {
     const { user } = useAuth();
+
+
+    const history = useHistory();
+    const location = useLocation();
+
+    const url = location.state?.from || '/allPackages';
+
+
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = (shippingInfo, e) => {
         const status = 'pending'
@@ -16,6 +25,7 @@ const BookingForm = ({ packageName }) => {
                 if (res.data.insertedId) {
                     alert('Your Order Has Benn Placed. Please Wait for Admin Approving.')
                     reset();
+                    history.push(url)
                 }
             })
 
