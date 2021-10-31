@@ -16,10 +16,11 @@ Travell bees is a tour arranger inn Bnagladesh. We located at #12/B, Green Road,
 * You must have a Google Account to access this website
 
 ### How to use?
-At first Login/Register with your google account then click on your profile photo and go to your DashBoard.
+At first click the profile ICON then Login/Register with your google account and after log in it redirect you to your DashBoard.
 Click on MANAGE PACKAGES to add or remove packages.
 Click on MANAGE BOOKINGS to Approve or Reject Customer's Bookings.
 Click on MY BOOKINGS to access your Bookings.
+and click log out to logout.
 
 
 ### [Server Link](https://agile-mesa-76364.herokuapp.com/)
