@@ -4,8 +4,8 @@
 };
 
 @media only screen and (max-width:770px){
-    .package-details{
-        display: grid;
-        grid-template-columns: 1fr;
+    .detail-image{
+        display: block;
+        width: 100%;
     }
 }
